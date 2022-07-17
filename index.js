@@ -7,7 +7,10 @@ import cookieParser from 'cookie-parser'
 const app = express();
 
 app.use(express.json());
+app.use(cookieParser());
 app.use('/api/v1/auth', authRouter);
+
+// Solo para ejemplo Login/Token
 app.use(express.static("public"));
 
 const PORT = process.env.PORT || 5000;

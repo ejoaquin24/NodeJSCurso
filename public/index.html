@@ -12,7 +12,6 @@
 		<input type="password" placeholder="password" id="password">
 		<button type="submit">Send</button>
 	</form>
-
 	<script>
 		const form = document.getElementById("form");
 		const email = document.getElementById("email");
@@ -34,15 +33,14 @@
 
 				if(!res.ok) return 
 
-				const data = await res.json()
+				//const { token, expiresIn } = await res.json()
 
-				localStorage.setItem('token', data.token)
+				// localStorage.setItem('token', token)
 
 			} catch (error) {
 				console.log(error)
 			}
 		});
-
 	</script>
 </body>
 </html>
