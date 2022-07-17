@@ -20,7 +20,8 @@ export const validatorToken = ( req, res, next ) => {
 			"invalid signature": "La firma del JWT no es válida",
 			"jwt expired": "JWT expirado",
 			"invalid token": "Token no válido",
-			"No Bearer": "Utiliza formato Bearer"
+			"No Bearer": "Utiliza formato Bearer",
+			"jwt maltformed": "No tiene formato Bearer"
 		}
 
 		return res.status(401).send({ error: tokenVerificationErrors[error.message] })
